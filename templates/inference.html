@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+    var show_img = function() {
+        $.get('/infer', 
+        function(x){
+            var timestamp = new Date().getTime();   
+            var el = document.getElementById("img_tg");
+            el.src = "/static/data/test.png?t="+timestamp;
+            document.getElementById('img_tg').style.display='block';
+            document.getElementById('img_p').style.display='block';
+        })
+    }
+    
+    var predict_img = function() {
+        console.log("here")
+        data = d3.csv("/static/data/pred.csv", row => {
+            return {
+                pred: +row.prediction,
+                label: +row.label
+            }
+        })
+        .then(data => {
+            console.log("Data", data[0].pred)
+            document.getElementById("pred_id").innerHTML = "Prediction: "  + data[0].pred.toString()
+            document.getElementById("target_id").innerHTML = "Target: " + data[0].label.toString()
+        })
+
+    }
+</script>
+<div class="page">
+    
+    <div class="load_img">
+        <!-- <form class="grid" action="/infer" method="post">
+            <center><input type="submit" value="Load Random Test Image" ></center>
+          </form> -->
+          <center><button id="load_btn" onclick="show_img()">Load Random Test Image</button></center>
+    </div>
+    <div class="img_div">
+        <img src="/static/data/test.png" id="img_tg" alt="Test Image">
+        <p id="img_p" style="display: none;">Test Image</p>
+    </div>
+
+    <div class="predict_img">
+        <!-- <form class="grid" action="/infer" method="post">
+            <center><input type="submit" value="Load Random Test Image" ></center>
+          </form> -->
+          <center><button id="predict_btn" onclick="predict_img()">Model Prediction</button></center>
+    </div>
+    <div class="labels" id="common_val">
+        <center><label for="prediction" name="pred_lbl" id="pred_id" class="common_label"></label></center>
+    </div>
+    <div class="target" id="common_val">
+        <center><label for="target" name="target_lbl" id="target_id" class="common_label"></label></center>
+
+    </div>
+
+</div>
+{% endblock %}

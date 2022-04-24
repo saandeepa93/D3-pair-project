@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v5.js"
+			integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
+			crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+    <!--*******************************************-->
+    <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+    <script src="js/titanic_vis.js"></script>
+    <!-- <script src="js/sample_visualization.js"></script> -->
+    <!--*******************************************-->
+
+
+    <title>CAP 4744/5745 - Interactive Data Visualization - Project 2</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Project 2: Your Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="calvin.html">Calvin College 2004</a></li>
+            <li class="nav-item"><a class="nav-link" href="iris.html">Iris Dataset</a></li>
+            <li class="nav-item active"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
+            <li class="nav-item"><a class="nav-link" href="wb_st.html">World Bank Data, Science-and-Technology</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="page">
+
+    <h1>CAP 4744/5745 - Interactive Data Visualization</h1>
+    <h2>Project 2: Titanic Passenger List Dataset</h2>
+    <h2>Saandeep Aathreya</h2>
+
+    <h3>Visualization 1: Bar Chart</h3>
+    <div><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
+    <div>
+        <p >
+            <!-- Brief description of what the visualization is trying to show about the data.
+            <b>How many surviving male and female passengers are there?</b>
+            The above visualization is an attempt to show the comparison of survivors between the two genders. 
+            The bar chart shows a contrasting difference in the number of survivors  with the number of female survivors
+            almost the double of their counterpart. There are additional factors that contribute to this detail 
+            that are shown in further visualizations. -->
+        </p>
+        <p >
+            <!-- Brief description of the visualization, encoding, and embellishment rationale. -->
+            <!-- The most basic bar chart has been used to visualize the since that is the most appropriate.
+            The height of the bar chart represents the surviving population per gender. 
+            Most of the times, simple data requires simple techniques without the need for "beautification". -->
+
+        </p>
+    </div>
+
+    <h3>Visualization 2: Scatter Plot</h3>
+    <div><svg id="vis_2" name="vis_2" class="default_svg"></svg></div>
+    <div>
+        <p >
+            <!-- Brief description of what the visualization is trying to show about the data. -->
+            <!-- The above visualization is trying to answer two questions. -->
+            <ul>
+                <!-- <li><b>Was age a factor for survival during the titanic sinking?</b> This helps in understanding whether the 
+                    physically healthy young adults were able to survive better compared to the older age group and
+                    children. Clearly, the plots show no real difference in the survival across age groups.
+                </li>
+
+                <li><b>Was the fare price that people paid helped them survive? </b> This is basically assessing if the 
+                passengers who were present in upper class were able to survive better. It can be clearly seen that 
+                upper class passengers had a higher proportions of survivors, whereas, lower fair passengers had roughly equal
+                proportions of survivors. The x-axis represents the age and the y-axis represents the Fare amount.
+                </li> -->
+            </ul>
+        </p>
+        <p >
+            <!-- Brief description of the visualization, encoding, and embellishment rationale. -->
+            <!-- When dealing with data which has numbers on continuous scale for all dimensions, scatter plots
+            is the best way to represent. Although scatter plot does not give the precise values, italic
+            prvoides a fuzzy detail in the overall data. Similarly, color encoding has been utilized to 
+            indicate whether a data point (passenger) survived or not. 'y' axis ticks have been extended to
+            represent different age groups. -->
+        </p>
+    </div>
+
+    <h3>Visualization 3: Stacked and grouped bar chart</h3>
+    <div><svg id="vis_3" name="vis_3" class="default_svg"></svg></div>
+    <div>
+        <p>
+            <!-- Brief description of what the visualization is trying to show about the data. -->
+            <!-- <b>What is the survival ratio among different genders for each ticket class?</b>
+            The above visualization show the survival rate of different class per gender. Each 
+            gender has a pair of stacked bar plots, which indicates non-surviving and 
+            surviving passenger counts (left to right). Once again, this visualization 
+            is an attempt to capture a much comprehensive representation of factors that correlates to 
+            survival of a passenger. One key thing to note is the high number of non-surviving
+            male passenger in the 3rd class ticket and the lowest number of non-surviving female passengers.
+            in the 1st class. This might denote that the location for the passengers in the 
+            3rd class might be the most unsafe place during sinking. -->
+
+        </p>
+        <p>
+            <!-- Brief description of the visualization, encoding, and embellishment rationale. -->
+            <!-- Grouped and stacked bar chart has been used to represent the numbers. Each gender is grouped with a pair of 
+            stacked bar charts. These stacked bar charts are color encoded which denote the different class 
+            in that category. The x-axis represent the gender and the y-axis represents the count of passengers in each category. -->
+
+        </p>
+    </div>
+
+    <h3>Visualization 4: Density plot/Heatmap</h3>
+    <div><svg id="vis_4" name="vis_4" class="default_svg"></svg></div>
+    <div>
+        <p>
+            <!-- Brief description of what the visualization is trying to show about the data. -->
+            <!-- <b>Can heatmap give a better picture for vis 3 in determining the ticket class with different survival rate?</b>
+            This is a density plot for to show the correlation between sex and class in the surviving.
+            This plot corroborates the previous plot which clearly shows that the female survivors in teh first class 
+            having a high count(color gradient). Similarly, the male passengers in the 2nd class had the lowest survival number.
+            This should not be confused with the proportion shown in previous chart.  -->
+
+
+            
+        </p>
+        <p>
+            <!-- Brief description of the visualization, encoding, and embellishment rationale. -->
+            <!-- The heatmap uses color gradient to represent survival count. Higher count is denoted by a stronger intensity of the 
+            gradient. The x-axis represents the class of ticket and y-axis represents the sex. Unlike the 
+            bar charts, the heatmap does not show precise numbers but rather and overview of the data/pattern. -->
+
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+</html>

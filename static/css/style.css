@@ -1,0 +1,157 @@
+.metric {
+  height:inherit;
+  margin-top: 2%;
+}
+
+.page{
+  background-color: antiquewhite;
+  border: #313639;
+  border: 1px solid black;
+}
+.navbar-default {
+  background-color: black;
+}
+.default_svg {
+  /* background-color: aliceblue; */
+  display: block;
+  margin:auto;
+  width: 60%;
+  border: 2px solid lightgray;
+}
+
+.summ_svg {
+  /* background-color:aquamarine; */
+  display: block;
+  margin:auto;
+  border: 2px solid lightgray;
+}
+
+.avg_svg {
+  /* background-color:aquamarine; */
+  display: block;
+  margin:auto;
+  width: 30%;
+  border: 2px solid lightgray;
+}
+
+.acc {
+  display: flex;
+  /* margin-top: 4%; */
+  position:relative;
+}
+
+.loss{
+  display: flex;
+  margin-top: 2%;
+}
+.grad{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+.progress {
+  margin-top: 2%;
+}
+
+
+
+h4 {
+  text-align: center;
+  font: 20px times;
+	stroke: rgb(142, 136, 131);
+}
+
+
+.start_btn{
+  margin-top: 0.5%;
+}
+
+.summary {
+  margin-top: -5%;
+  margin-bottom: -5%;
+}
+
+#prog_label{
+  vertical-align: middle;
+}
+
+
+/* .default_svg {
+	border: 2px solid lightgray;
+	margin-top: 10px;
+    width: 200px;
+    height: 200px;
+} */
+
+/* .page {
+	margin-left: 15px;
+	padding-top: 10px;
+} */
+
+ /* Custom classes */
+.axisLabel {
+	fill: black;
+	font: 12px sans-serif;
+	stroke: rgb(99, 95, 93)
+}
+
+.axisFont {
+	font: 8px times;
+	stroke: rgb(142, 136, 131);
+}
+
+.mainTitle {
+	fill: black;
+	font: 12px times;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+div.tooltip-donut {
+     position: absolute;
+     text-align: center;
+     padding: .5rem;
+     background: #FFFFFF;
+     color: #313639;
+     border: 1px solid #313639;
+     border-radius: 8px;
+     pointer-events: none;
+     font-size: 1.3rem;
+}
+
+
+/* INFERECE */
+
+.img_div{
+  text-align: center;
+  /* width: 300px;
+  height: 300px; */
+}
+
+img {
+  /* margin: auto; */
+  margin:auto;
+  height: 200px;
+  width: 200px;
+  margin-top: 2%;
+  border: black;
+  display:none
+}
+
+.img_p {
+  display: none;
+}
+
+
+.common_label{
+  color: #B4886B;
+  font-weight: bold;
+  display: block;
+  width: 150px;
+}
+
+#predict_btn{
+  margin-top: 3%;
+}
+.labels{
+  margin-top: 2%;
+}

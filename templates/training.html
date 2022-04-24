@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script type=text/javascript>
+  window.onload = function() {
+    if("{{post_req}}" == "True"){
+      console.log("inside post Request")
+      func1();
+      // d3.interval(func1, 2000)
+    }
+  }
+</script>
+
+<div class="page">
+  <div class="start_btn">
+    <form class="grid" action="/start" method="post">
+      <center><input type="submit" value="Start Training" ></center>
+    </form>
+    <!-- <center><input type="button" id="test" value="Start Training"></center> -->
+  </div>
+  <div class="progress">
+    <p id="prog_label"></p>
+    <svg id="vis_progress" name="vis_progress" class="progress_svg"></svg>
+  </div>
+  <div class="metric">
+    <div class="acc">
+      <div class="acc_train">
+        <h4>Training Accuracy</h4>
+        <svg id="vis_1" name="vis_1" class="default_svg"></svg>
+      </div>
+    
+      <div class="acc_val">
+        <h4>Validation Accuracy</h4>
+        <svg id="vis_2" name="vis_2" class="default_svg"></svg>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h4>GPU Usage</h4>
+      <svg id="vis_summ" name="vis_summ" class="summ_svg"></svg>
+    </div>
+  
+    <div class="loss">
+      <div class="loss_train">
+        <h4>Training Loss</h4>
+        <svg id="vis_3" name="vis_3" class="default_svg"></svg>
+      </div>
+    
+      <div class="loss_val">
+        <h4>Validation Loss</h4>
+        <svg id="vis_4" name="vis_4" class="default_svg"></svg>
+      </div>
+    </div>
+  
+  </div>
+ 
+  <div class="grad">
+    <h4>Average Gradients</h4>
+    <svg id="vis_5" name="vis_5" class="avg_svg"></svg>
+  </div>
+
+</div>
+{% endblock %}
