@@ -547,7 +547,7 @@ update_train_loss = (data, svg_dom) => {
           .style('stroke', 'rgb(192, 197, 187)')
 
   yAxisG.append('text')
-        .text('Accuracy')
+        .text('Loss')
         .attr('x', -innerHeight/3.5)
         .attr('y', -20)
         .attr('transform', 'rotate(-90)')
@@ -570,7 +570,7 @@ update_train_loss = (data, svg_dom) => {
     .style('opacity', 1)
 
     tooltip
-      .text("Accuracy: " + d.train_loss.toFixed(2))
+      .text("Loss: " + d.train_loss.toFixed(2))
       .attr('x', d3.mouse(this)[0])
       .attr('y', d3.mouse(this)[1]+15)
 
@@ -741,7 +741,7 @@ update_val_loss = (data, svg_dom) => {
           .style('stroke', 'rgb(192, 197, 187)')
 
   yAxisG.append('text')
-        .text('Accuracy')
+        .text('Loss')
         .attr('x', -innerHeight/3.5)
         .attr('y', -20)
         .attr('transform', 'rotate(-90)')
@@ -764,7 +764,7 @@ update_val_loss = (data, svg_dom) => {
     .style('opacity', 1)
 
     tooltip
-      .text("Accuracy: " + d.val_loss.toFixed(2))
+      .text("Loss: " + d.val_loss.toFixed(2))
       .attr('x', d3.mouse(this)[0])
       .attr('y', d3.mouse(this)[1]+15)
 
@@ -934,7 +934,7 @@ update_avg_grad = (data, svg_dom) => {
           .style('stroke', 'rgb(192, 197, 187)')
 
   yAxisG.append('text')
-        .text('Accuracy')
+        .text('Grad')
         .attr('x', -innerHeight/3.5)
         .attr('y', -30)
         .attr('transform', 'rotate(-90)')
@@ -957,7 +957,7 @@ update_avg_grad = (data, svg_dom) => {
     .style('opacity', 1)
 
     tooltip
-      .text("Accuracy: " + d.avg_grad.toFixed(3))
+      .text("Grad: " + d.avg_grad.toFixed(3))
       .attr('x', d3.mouse(this)[0])
       .attr('y', d3.mouse(this)[1]+15)
 

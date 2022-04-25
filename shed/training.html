@@ -6,7 +6,7 @@
     if("{{post_req}}" == "True"){
       console.log("inside post Request")
       func1();
-      d3.interval(func1, 3000)
+      d3.interval(func1, 2000)
     }
   }
 </script>
@@ -28,6 +28,11 @@
         <h4>Training Accuracy</h4>
         <svg id="vis_1" name="vis_1" class="default_svg"></svg>
       </div>
+
+      <div class="summary">
+        <h4>GPU Usage</h4>
+        <svg id="vis_summ" name="vis_summ" class="summ_svg"></svg>
+      </div>
     
       <div class="acc_val">
         <h4>Validation Accuracy</h4>
@@ -35,15 +40,17 @@
       </div>
     </div>
 
-    <div class="summary">
-      <h4>GPU Usage</h4>
-      <svg id="vis_summ" name="vis_summ" class="summ_svg"></svg>
-    </div>
+    
   
     <div class="loss">
       <div class="loss_train">
         <h4>Training Loss</h4>
         <svg id="vis_3" name="vis_3" class="default_svg"></svg>
+      </div>
+
+      <div class="grad">
+        <h4>Average Gradients</h4>
+        <svg id="vis_5" name="vis_5" class="avg_svg"></svg>
       </div>
     
       <div class="loss_val">
@@ -54,10 +61,7 @@
   
   </div>
  
-  <div class="grad">
-    <h4>Average Gradients</h4>
-    <svg id="vis_5" name="vis_5" class="avg_svg"></svg>
-  </div>
+  
 
 </div>
 {% endblock %}
