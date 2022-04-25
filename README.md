@@ -30,5 +30,5 @@ python3 app.py
 
     + **D3-pair-project > app.py** - Uncomment line 21
     + **D3-pair-project > /templates/training.html** - Uncomment line 9
-    + **D3-pair-project > /js/app.js** - Update line 11 to \
+    + **D3-pair-project > static/js/app.js** - Update line 11 to \
     ```data = d3.csv("/static/data/metrics.csv", row => {```
