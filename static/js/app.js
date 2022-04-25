@@ -8,7 +8,7 @@ const svg_dom_gpu_usage = '#vis_summ'
 
 func1 = () => {
   
-  data = d3.csv("/static/data/metrics.csv", row => {
+  data = d3.csv("/static/data/metrics5.csv", row => {
     return {
       epoch: +row.epoch + 1,
       train_acc: +row.train_acc,

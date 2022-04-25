@@ -18,7 +18,7 @@ def inference():
 
 @app.route('/start', methods=['POST'])
 def start():
-  ret_val = subprocess.Popen(['sh', './ssh.sh'])
+  # ret_val = subprocess.Popen(['sh', './ssh.sh'])
   return render_template('training.html', post_req=True)
 
 @app.route('/infer')
