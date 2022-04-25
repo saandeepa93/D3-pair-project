@@ -20,7 +20,7 @@ python3 app.py
     + **D3-pair-project > infer.sh** - Update your local path for line 3 and line 6 and add your checkpoint option --ckp for line 7
     + **deep_learning > logger.py** - Update csv path before ```/D3-pair-project``` in line 10 to your local.
     + **deep_learning > test.py** - Update csv path before ```/D3-pair-project``` in line 36 to your local.
-    + **deep_learning > logger.py** - Update test image path before ```/D3-pair-project``` in line 58 to your local.
+    + **deep_learning > test.py** - Update test image path before ```/D3-pair-project``` in line 58 to your local.
 
 ## **4. To test the visualization without realtime feature**
 * Clone the visualization repo and perform step #2. This should automatically create a visualization on the dashboard.
